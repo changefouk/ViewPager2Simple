@@ -1,0 +1,49 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    ext.kotlin_version = '1.3.41'
+    repositories {
+        google()
+        jcenter()
+        
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.4.2'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+ext {
+    // Sdk and tools
+    minSdkVersion = 22
+    targetSdkVersion = 28
+    compileSdkVersion = 28
+
+    appCompatVersion = '1.0.2'
+    constraintlayoutVersion = '1.1.3'
+    recyclerviewVersion = '1.1.0-beta03'
+    viewPager2Version = '1.0.0-beta03'
+
+    // App dependency
+    gsonVersion = '2.8.0'
+    timberVersion = '4.7.1'
+    koinVersion = '2.0.1'
+    rxjavaVersion = '2.2.5'
+    rxAndroidVersion = '2.1.0'
+    glideVersion = '4.8.0'
+    pageindicatorview = '1.0.3'
+}
